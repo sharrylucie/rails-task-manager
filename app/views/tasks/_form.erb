@@ -1,10 +1,11 @@
-<%= form_for(@task) do |f| %>
+<%= form_with model: @task, local: true do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
 
   <%= f.label :details %>
   <%= f.text_field :details %>
-  <%= check_box_tag :accept, 1, @task.completed %>
+  <label for="checkbox">Completed</label>
+  <%= f.check_box :completed %>
 
   <%= f.submit %>
 <% end %>
