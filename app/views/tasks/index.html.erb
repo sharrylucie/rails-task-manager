@@ -5,7 +5,7 @@
     <li>
       <%= check_box_tag :accept, 1, task.completed, disabled: true %>
       <%= link_to "#{task.title}", task_path(task) %>
-      <%= link_to "Delete", tasks_path,
+      <%= link_to "Delete", task_path(task),
       method: :delete,
       data: { confirm: "Are you sure?" } %>
     </li>
